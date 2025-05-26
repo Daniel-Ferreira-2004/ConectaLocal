@@ -1,9 +1,38 @@
+
 *{
     margin: 0;
     padding: 0;
     list-style-type: none;
     text-decoration: none;
 }
+
+
+
+/*DIVS UNIVERSAL-------------------------------------------- */
+
+.universal {
+    padding: 6rem 3rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content: center;
+    
+}
+
+.universal div {
+   
+    width: 30rem;
+    height: 20rem;
+    margin: 10px;
+    min-width: 299px;
+}
+
+
+/*------------------------------------------------*/
+
+
+
+
 
 body {
     background-color: #242424;
@@ -53,6 +82,15 @@ nav {
     padding-left: 0.5em;
 }
 
+.hamburguer{
+    display: none;
+}
+
+header img{
+    
+    height: 7rem;
+    
+}
 /*Fim do header*/
 
 .containerVoluntarios {
@@ -94,4 +132,64 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+/*SESSAO 2 ------------------------------------------ */
+.div-sessao2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.sessao2 {
+    background-image: url(../img/Imagemdiv.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.sessao2 button{
+    padding: 0.5rem;
+    border-radius: 5px;
+    width: 15rem;
+    background-color: #05050579;
+    color: white;
+    border: none;
+}
+
+/*------------------------------*/
+
+ @media (max-width: 768px) {
+    .hamburguer {
+        display: flex;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+    
+    .lista-header{
+        display: none;
+    }
+
+
+    .universal {
+        flex-direction: column;
+        padding: 4rem 2rem;
+        align-items: center;
+    }
+
+    .universal div {
+        width: 90%;
+        height: auto;
+    }
+
+
+    .sessao2 button {
+        width: 100%;
+        max-width: 15rem;
+    }
 }
