@@ -117,7 +117,7 @@ nav {
     gap: 2em;
 }
 
-.ComoFuncionaTexto {
+.TextoLinha {
     text-align: center;
     color: white;
     padding: 2em;
@@ -157,6 +157,8 @@ nav {
 }
 /*Fim Como funciona*/
 
+/*Começo Faça Parte*/
+
 .façaParte {
     background: linear-gradient(120deg, rgba(0, 0, 0, 0.603) 40%, rgba(0, 0, 0, 0.603) 20%), url(../img/indexIMG/AmigosDeFundo.jpg);
     background-position: center;
@@ -185,6 +187,18 @@ nav {
 .façaParteTexto h2 {
     font-size: 2em;
 }
+/*Fim Faça Parte*/
+
+/*Começo Empresas*/
+.empresasContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+    gap: 1em;
+    margin: 3em 5em;
+    align-items: center;
+    justify-content: center;
+}
+/*Fim Empresas*/
 
 /*footer*/
 
