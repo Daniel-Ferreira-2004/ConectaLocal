@@ -64,7 +64,45 @@ nav {
     
 }
 /*Fim do header*/
+/*Chamando Botão*/
+.btn {
+    position: relative;
+    width: 12em;
+    padding: 0.5em;
+    margin: 0.5em auto;
+    border-radius: 2em;
+    color: #E65100;
+    border: 2px solid #E65100;
+    background-color: #242424;
+    font-size: 1em;
+    overflow: hidden;
+    cursor: pointer;
+    transition: color 0.4s ease;
+    font-weight: bold;
+    z-index: 0;
+}
 
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: #E65100;
+    z-index: -1;
+    transition: width 0.8s ease;
+}
+
+.btn:hover::before {
+    width: 100%;
+}
+
+.btn:hover {
+    color: #242424;
+}
+
+/*Finalizando Botão*/
 /*Começo Voluntarios*/
 .containerVoluntarios {
     margin: 5em 10em;
@@ -89,15 +127,6 @@ nav {
 
 .voluntarioTexto p {
     width: 80%;
-}
-
-.btn {
-    background-color: #E65100;
-    color: black;
-    padding: 1em;
-    border-radius: 1em;
-    margin: 1em;
-    width: 10em;
 }
 
 .voluntarioIMG {
