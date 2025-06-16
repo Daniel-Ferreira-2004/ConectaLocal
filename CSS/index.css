@@ -1,5 +1,4 @@
-
-*{
+* {
     margin: 0;
     padding: 0;
     list-style-type: none;
@@ -19,6 +18,7 @@ header {
     position: sticky;
     top: 0;
     left: 0;
+    z-index: 999;
 }
 
 nav {
@@ -36,13 +36,17 @@ nav {
     margin-right: 2em;
 }
 
-.navPincipal ul li a{
+.navPincipal ul li a {
     color: white;
+    font-weight: 900;
+
 }
 
-.navPincipal ul li a:hover{
-    color: black;
-    transition: 1s;
+.navPincipal ul li a:hover {
+    color: #242424;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    padding-bottom: 0.4em;
+    transition: 0.8s;
 }
 
 .logo {
@@ -50,20 +54,30 @@ nav {
     color: white;
 }
 
-.logo a{
+.logo a {
     color: white;
     padding-left: 0.5em;
+    font-weight: 900;
 }
 
-.hamburguer{
+.logo a:hover {
+    color: #242424;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    padding-bottom: 0.4em;
+    transition: 0.8s;
+}
+
+.hamburguer {
     display: none;
 }
 
-.logo-header img{
+.logo-header img {
     height: 3rem;
-    
+
 }
+
 /*Fim do header*/
+
 /*Chamando Botão*/
 .btn {
     position: relative;
@@ -103,9 +117,10 @@ nav {
 }
 
 /*Finalizando Botão*/
+
 /*Começo Voluntarios*/
 .containerVoluntarios {
-    margin: 5em 10em;
+    margin: 5em 25%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -121,7 +136,8 @@ nav {
     color: white;
 }
 
-.voluntarioTexto h1, p {
+.voluntarioTexto h1,
+p {
     padding: 1em 0;
 }
 
@@ -135,6 +151,7 @@ nav {
     justify-content: center;
     align-items: center;
 }
+
 /*Fim Voluntarios*/
 
 /*Começo Como funciona*/
@@ -155,6 +172,7 @@ nav {
     align-items: center;
     justify-content: center;
 }
+
 .ComoFuncionaBox {
     background-image: url(../img/indexIMG/ImagemDeFundoLinhas.png);
     background-repeat: no-repeat;
@@ -171,10 +189,10 @@ nav {
 }
 
 .ComoFuncionaBoxTexto p {
-   padding: 1em;
+    padding: 1em;
 }
 
-.ComoFuncionaBox img{
+.ComoFuncionaBox img {
     width: 100%;
     height: auto;
 }
@@ -184,6 +202,7 @@ nav {
     width: 70%;
     margin: 1em;
 }
+
 /*Fim Como funciona*/
 
 /*Começo Faça Parte*/
@@ -208,7 +227,7 @@ nav {
     margin: 5em;
 }
 
-.façaParteTexto p{
+.façaParteTexto p {
     padding: 5em;
     font-size: 1.5em;
 }
@@ -216,6 +235,7 @@ nav {
 .façaParteTexto h2 {
     font-size: 2em;
 }
+
 /*Fim Faça Parte*/
 
 /*Começo Empresas*/
@@ -227,7 +247,12 @@ nav {
     align-items: center;
     justify-content: center;
 }
+
 /*Fim Empresas*/
+
+span {
+    color: #E65100;
+}
 
 /*footer*/
 
@@ -254,7 +279,8 @@ nav {
     font-size: 1.2rem;
 }
 
-.footer-section p, .footer-section ul li {
+.footer-section p,
+.footer-section ul li {
     font-size: 0.95rem;
     margin-bottom: 0.5rem;
 }
@@ -287,49 +313,56 @@ nav {
     padding-top: 1rem;
 }
 
+/*Fim Footer*/
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .footer-container {
+    html {
+        font-size: 80%;
+    }
+
+    .containerVoluntarios {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
+        margin: 2em 10%;
     }
 
-    .footer-section {
-        margin-bottom: 2rem;
-    }
-}
-
-
- @media (max-width: 768px) {
-    .hamburguer {
-        display: flex;
-        background: none;
-        border: none;
-        font-size: 24px;
-        cursor: pointer;
-    }
-    
-    .lista-header{
-        display: none;
-    }
-
-
-    .universal {
-        flex-direction: column;
-        padding: 4rem 2rem;
-        align-items: center;
-    }
-
-    .universal div {
-        width: 90%;
-        height: auto;
-    }
-
-
-    .sessao2 button {
+    .voluntarioTexto {
         width: 100%;
-        max-width: 15rem;
+        padding: 2em;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        margin-right: 0;
     }
+
+    .voluntarioIMG img {
+        width: 20em;
+        margin: 2em;
+    }
+
+    .ComoFuncionaContainer {
+        flex-direction: column;
+    }
+
+    .ComoFuncionaBox {
+        width: 100%;
+    }
+
+    .ComoFuncionaBoxTexto {
+        margin-bottom: 8em;
+    }
+
+    .façaParteTexto p {
+        padding: 2em 0;
+    }
+
+    .façaParteTexto h2 {
+        font-size: 1.5em;
+    }
+
+    .empresasContainer {
+        margin: 2em;
+    }
+
+
 }
