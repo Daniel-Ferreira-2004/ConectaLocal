@@ -19,6 +19,8 @@ header {
     top: 0;
     left: 0;
     z-index: 999;
+    width: 100%;
+
 }
 
 nav {
@@ -241,7 +243,7 @@ p {
 /*Começo Empresas*/
 .empresasContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(17em, 1fr));
     gap: 1em;
     margin: 3em 5em;
     align-items: center;
@@ -349,7 +351,7 @@ span {
     }
 
     .ComoFuncionaBoxTexto {
-        margin-bottom: 8em;
+        margin-bottom: 6em;
     }
 
     .façaParteTexto p {
@@ -361,8 +363,6 @@ span {
     }
 
     .empresasContainer {
-        margin: 2em;
+        margin: 2em auto;
     }
-
-
 }
