@@ -11,6 +11,7 @@ body {
     background-color: #242424;
 }
 
+/*Começo Cabeçalho*/
 header {
     background-color: #E65100;
     color: white;
@@ -64,6 +65,7 @@ nav {
 }
 /*Fim do header*/
 
+/*Começo Voluntarios*/
 .containerVoluntarios {
     margin: 5em 10em;
     display: flex;
@@ -104,9 +106,9 @@ nav {
     justify-content: center;
     align-items: center;
 }
+/*Fim Voluntarios*/
 
-
-/*SESSAO 2 ------------------------------------------ */
+/*Começo Como funciona*/
 .ComoFuncionaContainer {
     display: flex;
     justify-content: center;
@@ -128,7 +130,7 @@ nav {
     background-image: url(../img/indexIMG/ImagemDeFundoLinhas.png);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 50%;
+    width: 40%;
     text-align: center;
     color: white;
 }
@@ -145,7 +147,7 @@ nav {
 
 .ComoFuncionaBox img{
     width: 100%;
-    height: 30em;
+    height: auto;
 }
 
 .Linha {
@@ -153,10 +155,38 @@ nav {
     width: 70%;
     margin: 1em;
 }
+/*Fim Como funciona*/
+
+.façaParte {
+    background: linear-gradient(120deg, rgba(0, 0, 0, 0.603) 40%, rgba(0, 0, 0, 0.603) 20%), url(../img/indexIMG/AmigosDeFundo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.façaParteContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    text-align: center;
+    padding: 5em;
+    color: white;
+    margin: 5em;
+}
+
+.façaParteTexto p{
+    padding: 5em;
+    font-size: 1.5em;
+}
+
+.façaParteTexto h2 {
+    font-size: 2em;
+}
 
 /*footer*/
-
-
 
 .footer {
     background-color: #E65100;
