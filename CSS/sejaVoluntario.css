@@ -1,0 +1,66 @@
+/*Começo do Banner*/
+.Banner {
+    background: url(../img/Carrosel/Union.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.BannerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    text-align: center;
+    padding: 5em;
+    color: white;
+    width: 100%;
+    height: 10em;
+}
+
+/*Fim do Banner*/
+
+/*Começo do Carrossel*/
+.carrosselContainer {
+    display: flex;
+    justify-content: space-around;
+    margin: 1.5em;
+}
+
+.carrosselCard {
+    background-image: url(../img/indexIMG/ImagemDeFundoLinhas.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 20em;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 70%;
+}
+
+.carrosselimg {
+    width: 100%;
+    height: 20em;
+    border-radius: 0;
+    top: 0;
+}
+
+.carrosselimg img {
+    width: 100%;
+    height: 100%;
+}
+
+.carroselCardTexto {
+    padding: 1.5em;
+    height: 15em;
+}
+
+.carroselCardTexto p {
+    padding: 1em;
+}
+/*Fim do Carrossel*/
