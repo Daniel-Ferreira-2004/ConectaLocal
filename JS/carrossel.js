@@ -37,7 +37,7 @@ const swiper = new Swiper('.swiper', {
             slidesPerView: 3,          // A partir de 768px -> 2 slides
         },
         1024: {
-            slidesPerView: 5,          // A partir de 1024px -> 3 slides
+            slidesPerView: 4,          // A partir de 1024px -> 3 slides
         },
     },
 });
