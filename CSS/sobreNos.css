@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Bowlby+One+SC&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Special+Gothic+Expanded+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Bowlby+One+SC&family=Lexend:wght@100..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Special+Gothic+Expanded+One&family=Squada+One&display=swap');
+
+:root {
+    --CorPrimaria: #242424;
+    --CorSecundaria: #E65100;
+    --Psize: 1.2em;
+    --Hsize: 2em;
+    --fontH1: "Alegreya SC", serif;
+    --fontp: "Roboto", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--CorPrimaria);
+}
+
+h1,
+h2,
+h3 {
+    font-size: var(--Hsize);
+    font-family: var(--fontH1);
+}
+
+p,
+a {
+    font-size: var(--Psize);
+    font-family: var(--fontp);
+}
+
+
+/*Section 1*/
+
+.section1 {
+    background: linear-gradient(120deg, rgba(0, 0, 0, 0.603) 40%, rgba(0, 0, 0, 0.603) 20%), url(../img/indexIMG/BackIMGConecaLocal.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.sobrenos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    text-align: center;
+    padding: 10em;
+    color: white;
+    margin: 5em;
+}
