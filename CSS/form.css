@@ -1,9 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Bowlby+One+SC&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Special+Gothic+Expanded+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Bowlby+One+SC&family=Lexend:wght@100..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Special+Gothic+Expanded+One&family=Squada+One&display=swap');
+
+:root {
+    --CorPrimaria: #242424;
+    --CorSecundaria: #E65100;
+    --Psize: 1.2em;
+    --Hsize: 2em;
+    --fontH1: "Alegreya SC", serif;
+    --fontp: "Roboto", sans-serif;
+}
+
 /*Zerando o elemento pai do HTML*/
 * {
     margin: 0;
     padding: 0;
     text-decoration: none;
     box-sizing: border-box;
+}
+
+
+h1,
+h2,
+h3 {
+    font-size: var(--Hsize);
+    font-family: var(--fontH1);
+}
+
+p,
+a {
+    font-size: var(--Psize);
+    font-family: var(--fontp);
 }
 
 /*Chamando o conteudo principal*/
@@ -20,7 +46,7 @@ main {
     /*Elementos centralizados no y */
     text-align: center;
     /*Textos centralizados no eixo y */
-    background-color: #242424;
+    background-color: var(--CorPrimaria);
     /*Cor de fundo*/
 }
 
@@ -105,7 +131,7 @@ main {
 .overlayContent h2 {
     font-size: 2.7em;
     font-weight: 400;
-    color: #E65100;
+    color: var(--CorSecundaria);
 }
 
 /*Finalizando H2 do formulario e do overlay*/
@@ -116,7 +142,7 @@ p {
     padding: 1em;
     text-decoration: none;
     /*Sem decoração de texto*/
-    color: #E65100;
+    color: var(--CorSecundaria);
 }
 
 /*Finalizando a e p do formulario*/
@@ -136,7 +162,7 @@ p {
     margin: 10px;
     border-radius: 50%;
     /*Deixando redondo*/
-    background-color: #E65100;
+    background-color: var(--CorSecundaria);
     color: white;
     font-size: 1.5rem;
     overflow: hidden;
@@ -159,7 +185,7 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #242424;
+    background-color: var(--CorPrimaria);
     z-index: 0;
     /*Será visivel*/
     transition: 0.8s ease;
@@ -184,13 +210,13 @@ p {
     /*Tornando Visivel já no inicio da tela*/
     transition: color 0.3s ease;
     /*Transição de cor de 0.3s*/
-    color: #242424;
+    color: var(--CorPrimaria);
 }
 
 /*Finalizando Icones i*/
 
 .social-icon:hover i {
-    color: #E65100;
+    color: var(--CorSecundaria);
 }
 
 
@@ -201,8 +227,8 @@ p {
     margin-top: 0.8em;
     border: transparent;
     border-radius: 8px;
-    background-color: #E65100;
-    color: #242424;
+    background-color: var(--CorSecundaria);
+    color: var(--CorPrimaria);
 }
 
 /*Finalizando Inputs*/
@@ -219,9 +245,9 @@ input::placeholder {
     padding: 0.5em;
     margin: 0.5em auto;
     border-radius: 2em;
-    color: #E65100;
-    border: 2px solid #E65100;
-    background-color: #242424;
+    color: var(--CorSecundaria);
+    border: 2px solid var(--CorSecundaria);
+    background-color: var(--CorPrimaria);
     font-size: 1em;
     overflow: hidden;
     cursor: pointer;
@@ -237,7 +263,7 @@ input::placeholder {
     left: 0;
     height: 100%;
     width: 0%;
-    background-color: #E65100;
+    background-color: var(--CorSecundaria);
     z-index: -1;
     transition: width 0.8s ease;
 }
@@ -247,7 +273,7 @@ input::placeholder {
 }
 
 .btn:hover {
-    color: #242424;
+    color: var(--CorPrimaria);
 }
 
 /*Finalizando Botão*/
@@ -296,37 +322,37 @@ input::placeholder {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #E65100;
+    background-color: var(--CorSecundaria);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    color: #242424;
+    color: var(--CorPrimaria);
 }
 
 .overlayContent h2 {
     padding-bottom: 0.5em;
-    color: #242424;
+    color: var(--CorPrimaria);
 }
 
 .overlayContent p {
-    color: #242424;
+    color: var(--CorPrimaria);
     margin: 1em 3em;
 }
 
 .btnOverlay {
-    background-color: #E65100;
-    color: #242424;
-    border: 2px solid #242424;
+    background-color: var(--CorSecundaria);
+    color: var(--CorPrimaria);
+    border: 2px solid var(--CorPrimaria);
 }
 
 .btnOverlay::before {
-    background-color: #242424;
+    background-color: var(--CorPrimaria);
 }
 
 .btnOverlay:hover {
-    color: #E65100;
+    color: var(--CorSecundaria);
 }
 
 /*Finalizando Overlay(camada de cima)*/
@@ -345,7 +371,7 @@ input::placeholder {
 }
 
 .recuperacao {
-    background-color: #242424;
+    background-color: var(--CorPrimaria);
     width: 100%;
     border: 5px solid black;
 }
@@ -356,14 +382,14 @@ input::placeholder {
     margin: 2em;
     border: transparent;
     border-radius: 8px;
-    background-color: #E65100;
-    color: #242424;
+    background-color: var(--CorSecundaria);
+    color: var(--CorPrimaria);
 }
 
 label {
     font-size: 2.5em;
     font-weight: bold;
-    color: #E65100;
+    color: var(--CorSecundaria);
 }
 
 .btnRecuperacao {

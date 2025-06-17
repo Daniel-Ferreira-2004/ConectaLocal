@@ -1,18 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Bowlby+One+SC&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Special+Gothic+Expanded+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Bowlby+One+SC&family=Lexend:wght@100..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Special+Gothic+Expanded+One&family=Squada+One&display=swap');
+
+:root {
+    --CorPrimaria: #242424;
+    --CorSecundaria: #E65100;
+    --Psize: 1.2em;
+    --Hsize: 2em;
+    --fontH1: "Alegreya SC", serif;
+    --fontp: "Roboto", sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
     list-style-type: none;
     text-decoration: none;
-    font-family: sans-serif;
 }
 
 body {
-    background-color: #242424;
+    background-color: var(--CorPrimaria);
+}
+
+h1,
+h2,
+h3 {
+    font-size: var(--Hsize);
+    font-family: var(--fontH1);
+}
+
+p,
+a {
+    font-size: var(--Psize);
+    font-family: var(--fontp);
 }
 
 /*Começo Cabeçalho*/
 header {
-    background-color: #E65100;
+    background-color: var(--CorSecundaria);
     color: white;
     width: 100vw;
     position: sticky;
@@ -45,7 +69,7 @@ nav {
 }
 
 .navPincipal ul li a:hover {
-    color: #242424;
+    color: var(--CorPrimaria);
     border-bottom: 1px solid rgb(0, 0, 0);
     padding-bottom: 0.4em;
     transition: 0.8s;
@@ -63,7 +87,7 @@ nav {
 }
 
 .logo a:hover {
-    color: #242424;
+    color: var(--CorPrimaria);
     border-bottom: 1px solid rgb(0, 0, 0);
     padding-bottom: 0.4em;
     transition: 0.8s;
@@ -89,7 +113,7 @@ nav {
     border-radius: 2em;
     color: #E65100;
     border: 2px solid #E65100;
-    background-color: #242424;
+    background-color: var(--CorPrimaria);
     font-size: 1em;
     overflow: hidden;
     cursor: pointer;
@@ -115,7 +139,7 @@ nav {
 }
 
 .btn:hover {
-    color: #242424;
+    color: var(--CorPrimaria);
 }
 
 /*Finalizando Botão*/
@@ -187,6 +211,7 @@ p {
 .ComoFuncionaBoxTexto {
     padding: 1.5em;
     height: 15em;
+    padding-bottom: 2.5em;
     background-image: url(../img/indexIMG/ImagemDeFundoLinhas.png);
 }
 
@@ -229,21 +254,12 @@ p {
     margin: 5em;
 }
 
-.façaParteTexto p {
-    padding: 5em;
-    font-size: 1.5em;
-}
-
-.façaParteTexto h2 {
-    font-size: 2em;
-}
-
 /*Fim Faça Parte*/
 
 /*Começo Empresas*/
 .empresasContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(17em, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
     gap: 1em;
     margin: 3em 5em;
     align-items: center;
@@ -293,7 +309,7 @@ span {
 }
 
 .footer-section ul li a:hover {
-    color: black;
+    color: var(--CorPrimaria);
 }
 
 .social-icons a {
@@ -304,7 +320,7 @@ span {
 }
 
 .social-icons a:hover {
-    color: black;
+    color: var(--CorPrimaria);
 }
 
 .footer-bottom {
@@ -318,9 +334,10 @@ span {
 /*Fim Footer*/
 
 /* Responsividade */
+
 @media (max-width: 768px) {
     html {
-        font-size: 80%;
+        font-size: 70%;
     }
 
     .containerVoluntarios {
@@ -350,19 +367,22 @@ span {
         width: 100%;
     }
 
-    .ComoFuncionaBoxTexto {
-        margin-bottom: 6em;
-    }
-
     .façaParteTexto p {
         padding: 2em 0;
     }
 
-    .façaParteTexto h2 {
-        font-size: 1.5em;
+    .empresasContainer {
+        grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+        margin: 4em 2.5em;
     }
 
-    .empresasContainer {
-        margin: 2em auto;
+    .empresasContainer img {
+        width: 80%;
+    }
+}
+
+@media (max-width: 578px) {
+    .ComoFuncionaBoxTexto {
+        padding-bottom: 18em;
     }
 }
