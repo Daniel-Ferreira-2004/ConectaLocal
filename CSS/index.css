@@ -216,7 +216,7 @@ p {
 }
 
 .ComoFuncionaBoxTexto p {
-    padding: 1em;
+    padding: 0,9em;
 }
 
 .ComoFuncionaBox img {
@@ -314,7 +314,7 @@ span {
 
 .social-icons a {
     margin-right: 10px;
-    color: white;
+    color: rgb(251, 251, 251);
     font-size: 1.2rem;
     transition: color 0.3s ease;
 }
