@@ -17,7 +17,6 @@
     text-align: center;
     padding: 5em;
     color: white;
-    width: 100%;
     height: 10em;
 }
 
@@ -28,12 +27,13 @@
     width: 100%;
     max-width: 1200px;
     padding: 2em 0;
-    margin: 2em 0;
 }
 
 .swiper-wrapper {
     display: flex;
     align-items: center;
+    padding: 1em;
+    justify-content: center;
 }
 
 .swiper-slide {
@@ -47,6 +47,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
+    height: 30em;
     /* <- Slide ocupa 100% do espaço disponível */
     max-width: 18em;
     /* <- Limita no desktop */
@@ -55,11 +56,12 @@
     color: white;
     border-radius: 10px;
     overflow: hidden;
+    margin-bottom: 1em;
 }
 
 .carrosselimg {
     width: 100%;
-    height: 20em;
+    height: 12em;
 }
 
 .carrosselimg img {
@@ -73,10 +75,22 @@
     height: 10em;
 }
 
+.swiper-button-prev,
+.swiper-button-next {
+    color: var(--CorSecundaria)!important;
+    padding: 1em 1.5em;
+    border-radius: 100%;
+}
+
+.swiper-pagination-bullet-active {
+     background-color: var(--CorSecundaria)!important;
+}
 /*Fim do Carrossel*/
 
 @media (max-width: 768) {
-
+    html {
+        font-size: 60%;
+    }
     .swiper-button-prev,
     .swiper-button-next {
         display: none !important;
