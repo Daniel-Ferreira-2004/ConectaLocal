@@ -1,0 +1,10 @@
+
+
+
+.bg-querocontratar{
+ background: url(../img/Carrosel/img-bg-queroContratar-full.jpg);
+ background-position: center ;
+ background-repeat: no-repeat;
+ height: 100%;
+ padding: 15rem;
+}
