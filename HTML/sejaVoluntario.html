@@ -13,26 +13,29 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="logo-header">
-                <img src="../img/indexIMG/Logo Oficial.png" alt="logo site">
-            </div>
-            <div class="lista-header navPincipal">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="sejaVoluntario.html">Seja Voluntario</a></li>
-                    <li><a href="sobreNos.html">Sobre nós</a></li>
-                    <div class="logo">
-                        <i class="fa-solid fa-user"></i>
-                        <a href="form.html">Entrar</a>
-                    </div>
-                </ul>
-            </div>
-            <button class="hamburguer" id="hamburguerButton">
-                <i class="fa-solid fa-bars"></i></button>
-        </nav>
-    </header>
+     <header>
+    <nav>
+        <div class="logo-header">
+            <img src="../img/indexIMG/Logo Oficial.png" alt="logo site">
+        </div>
+
+        <button class="hamburguer" id="hamburguerButton">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="lista-header navPincipal" id="menuMobile">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sejaVoluntario.html">Seja Voluntário</a></li>
+                <li><a href="sobreNos.html">Sobre nós</a></li>
+                <li class="login-mobile">
+                    <i class="fa-solid fa-user"></i>
+                    <a href="form.html">Entrar</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
 
     <section class="Banner">
         <div class="BannerContainer">
@@ -393,6 +396,15 @@
 
     </section>
 
+
+    <script>
+    const menuButton = document.getElementById('hamburguerButton');
+    const menu = document.getElementById('menuMobile');
+
+    menuButton.addEventListener('click', () => {
+        menu.classList.toggle('active');
+    });
+</script>
 </body>
 
 </html>
