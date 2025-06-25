@@ -85,9 +85,22 @@
 .swiper-pagination-bullet-active {
      background-color: var(--CorSecundaria)!important;
 }
+
+
+.voluntario01 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.videoVoluntario{
+margin: 2rem;
+}
 /*Fim do Carrossel*/
 
-@media (max-width: 768) {
+@media (max-width: 768px) {
     html {
         font-size: 60%;
     }
@@ -98,5 +111,13 @@
 
     .carrosselCard {
         width: 90%;
+    }
+    .img-voluntario {
+        width: 300px;
+        
+        
+    }
+    video {
+        width:300px ;
     }
 }
