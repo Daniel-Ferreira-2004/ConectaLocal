@@ -262,11 +262,9 @@ p {
     width: 70%;
     margin: 1em;
 }
-
 /*Fim Como funciona*/
 
 /*Começo Faça Parte*/
-
 .façaParte {
     background: linear-gradient(120deg, rgba(0, 0, 0, 0.603) 40%, rgba(0, 0, 0, 0.603) 20%), url(../img/indexIMG/AmigosDeFundo.jpg);
     background-position: center;
@@ -286,7 +284,6 @@ p {
     color: white;
     margin: 5em;
 }
-
 /*Fim Faça Parte*/
 
 /*Começo Empresas*/
@@ -306,11 +303,10 @@ p {
 .empresasContainer img:hover {
     transform: scale(1.1);
 }
-
 /*Fim Empresas*/
 
 span {
-    color: #E65100;
+    color: var(--CorSecundaria);
 }
 
 
@@ -329,7 +325,7 @@ span {
 /*footer*/
 
 .footer {
-    background-color: #E65100;
+    background-color: var(--CorSecundaria);
     color: white;
     padding: 3rem 2rem 1rem 2rem;
 }
