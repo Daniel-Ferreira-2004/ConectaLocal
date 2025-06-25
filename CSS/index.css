@@ -273,6 +273,19 @@ span {
     color: #E65100;
 }
 
+
+/*venha se voluntariar*/
+.voluntariar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: start;
+    width: 60%;
+    margin-right: 2em;
+    color: white;
+}
+
+
 /*footer*/
 
 .footer {
