@@ -15,7 +15,8 @@ function toggleArrows() {
 // Cria o carrossel Swiper
 const swiper = new Swiper('.swiper', {
     slidesPerView: 3,          // Quantos slides aparecem por vez (mobile)
-    spaceBetween: 10,          // Espaço entre os slides
+    spaceBetween: 5,          // Espaço entre os slides
+    loop: true,
 
     navigation: {
         nextEl: '.swiper-button-next', // Botão próximo
