@@ -86,6 +86,10 @@ nav {
 
 }
 
+.navPincipal ul li:hover{
+    cursor: pointer;
+}
+
 .navPincipal ul li a:hover {
     color: var(--CorPrimaria);
     border-bottom: 1px solid rgb(0, 0, 0);
@@ -395,7 +399,15 @@ span {
 }
 
 /*Fim Footer*/
-
+/* Botão hambúrguer padrão */
+.hamburguer {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
 /* Responsividade */
 
 @media (max-width: 768px) {
@@ -442,33 +454,7 @@ span {
     .empresasContainer img {
         width: 80%;
     }
-}
 
-@media (max-width: 578px) {
-    .ComoFuncionaBoxTexto {
-        padding-bottom: 18em;
-    }
-
-    .façaParteContainer {
-        margin: 2em;
-        padding: 3em 1em;
-    }
-}
-
-
-
-/* Botão hambúrguer padrão */
-.hamburguer {
-    display: none;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.8rem;
-    cursor: pointer;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
     .lista-header {
         display: none; /* FORÇA o ocultamento no mobile */
         position: absolute;
@@ -504,5 +490,20 @@ span {
 
     .nav {
         flex-wrap: wrap;
+    }
+
+    .navPincipal ul li {
+        padding: 0.5em 0;
+    }
+}
+
+@media (max-width: 578px) {
+    .ComoFuncionaBoxTexto {
+        padding-bottom: 18em;
+    }
+
+    .façaParteContainer {
+        margin: 2em;
+        padding: 3em 1em;
     }
 }
