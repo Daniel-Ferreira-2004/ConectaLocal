@@ -8,34 +8,36 @@
     <link rel="stylesheet" href="../CSS/sejaVoluntario.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="../JS/script.js" defer></script>
     <script src="../JS/carrossel.js" defer></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <title>Seja Voluntario</title>
 </head>
 
 <body>
-     <header>
-    <nav>
-        <div class="logo-header">
-            <img src="../img/indexIMG/Logo Oficial.png" alt="logo site">
-        </div>
+    <header>
+        <nav>
+            <div class="logo-header">
+                <img src="../img/indexIMG/Logo Oficial.png" alt="logo site">
+            </div>
 
-        <button class="hamburguer" id="hamburguerButton">
-            <i class="fa-solid fa-bars"></i>
-        </button>
+            <button class="hamburguer" id="hamburguerButton">
+                <i class="fa-solid fa-bars"></i>
+            </button>
 
-        <div class="lista-header navPincipal" id="menuMobile">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="sejaVoluntario.html">Seja Voluntário</a></li>
-                <li><a href="sobreNos.html">Sobre nós</a></li>
-                <li class="login-mobile">
-                    <i class="fa-solid fa-user"></i>
-                    <a href="form.html">Entrar</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</header>
+            <div class="lista-header navPincipal" id="menuMobile">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sejaVoluntario.html">Seja Voluntário</a></li>
+                    <li><a href="sobreNos.html">Sobre nós</a></li>
+                    <li class="login-mobile">
+                        <i class="fa-solid fa-user"></i>
+                        <a href="form.html">Entrar</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
     <section class="Banner">
         <div class="BannerContainer">
@@ -100,7 +102,8 @@
                 <div class="swiper-slide">
                     <div class="carrosselCard">
                         <div class="carrosselimg">
-                            <img src="../img/Carrosel/imagem de auxilio com tarefas.png" alt="auxílio com tarefas domesticas">
+                            <img src="../img/Carrosel/imagem de auxilio com tarefas.png"
+                                alt="auxílio com tarefas domesticas">
                         </div>
                         <div class="carroselCardTexto">
                             <h2>Auxílio tarefas domesticas</h2>
@@ -191,7 +194,8 @@
                         </div>
                         <div class="carroselCardTexto">
                             <h2>Ajuda com Idosos</h2>
-                            <p>Ajude um idoso com tarefas simples do dia a dia, como fazer compania, jogar xadrez, ajudar nas nescessidades de casa...</p>
+                            <p>Ajude um idoso com tarefas simples do dia a dia, como fazer compania, jogar xadrez,
+                                ajudar nas nescessidades de casa...</p>
                         </div>
                         <a href="form.html"><button class="btn">Seja Voluntário</button></a>
                     </div>
@@ -388,7 +392,7 @@
     </section>
 
     <div class="TextoLinha videoVoluntario">
-        <h2>O que é ser um  <span>Voluntariar</span>?</h2>
+        <h2>O que é ser um <span>Voluntariar</span>?</h2>
         <div class="Linha"></div>
     </div>
     <section class="voluntario01 videoVoluntario">
@@ -398,13 +402,13 @@
 
 
     <script>
-    const menuButton = document.getElementById('hamburguerButton');
-    const menu = document.getElementById('menuMobile');
+        const menuButton = document.getElementById('hamburguerButton');
+        const menu = document.getElementById('menuMobile');
 
-    menuButton.addEventListener('click', () => {
-        menu.classList.toggle('active');
-    });
-</script>
+        menuButton.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
 </body>
 
 </html>

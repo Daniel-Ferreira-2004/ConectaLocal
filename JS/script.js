@@ -1,19 +1,23 @@
 window.revelar = ScrollReveal({reset:true});
 
-revelar.reveal(".ComoFunciona", {
-    duration: 2000,
-    distance: "70px",
-    origin: "top"
-});
+function aplicarScrollReveal(selectores) {
+    selectores.forEach(seletor => {
+        revelar.reveal(seletor, {
+            duration: 2000,
+            distance: "70px",
+            origin: "top"
+        });
+    });
+}
 
-revelar.reveal(".façaParte", {
-    duration: 2000,
-    distance: "70px",
-    origin: "top"
-});
+// Lista de seletores que você quer animar
+const elementosParaAnimar = [
+    ".ComoFunciona",
+    ".façaParte",
+    ".empresas",
+    ".Banner",
+    ".swiper-slide"
+];
 
-revelar.reveal(".empresas", {
-    duration: 2000,
-    distance: "70px",
-    origin: "top"
-});
+// Aplica a animação a todos os seletores
+aplicarScrollReveal(elementosParaAnimar);
