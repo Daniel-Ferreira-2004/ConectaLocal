@@ -11,35 +11,36 @@
 </head>
 
 <body>
-   <header>
-    <nav>
-        <div class="logo-header">
-            <img src="../img/indexIMG/Logo Oficial.png" alt="logo site">
-        </div>
+    <header>
+        <nav>
+            <div class="logo-header">
+                <img src="../img/indexIMG/Logo Oficial.png" alt="logo site">
+            </div>
 
-        <button class="hamburguer" id="hamburguerButton">
-            <i class="fa-solid fa-bars"></i>
-        </button>
+            <button class="hamburguer" id="hamburguerButton">
+                <i class="fa-solid fa-bars"></i>
+            </button>
 
-        <div class="lista-header navPincipal" id="menuMobile">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="sejaVoluntario.html">Seja Voluntário</a></li>
-                <li><a href="sobreNos.html">Sobre nós</a></li>
-                <li class="login-mobile">
-                    <i class="fa-solid fa-user"></i>
-                    <a href="form.html">Entrar</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</header>
+            <div class="lista-header navPincipal" id="menuMobile">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sejaVoluntario.html">Seja Voluntário</a></li>
+                    <li><a href="sobreNos.html">Sobre nós</a></li>
+                    <li class="login-mobile">
+                        <i class="fa-solid fa-user"></i>
+                        <a href="form.html">Entrar</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-    <section class="encontreVoluntarios">
+    <section class="encontreVoluntarios fade-in">
         <div class="containerVoluntarios">
             <div class="voluntarioTexto">
-                <h1>Encontre voluntários dedicados e prontos para ajudar você no que precisar. Estamos juntos nessa!</h1>
-                <p>Se você precisa de aulas particulares, de ajuda para fazer compras ou para levar os animais de
+                <h1>Encontre voluntários dedicados e prontos para ajudar você no que precisar. Estamos juntos nessa!
+                </h1>
+                <p class="delay-fade delay-1">Se você precisa de aulas particulares, de ajuda para fazer compras ou para levar os animais de
                     estimação para passear, mas também consegue realizar essas e outras atividades, venha fazer parte da
                     nossa comunidade. Aqui, uma mão lava a outra.
                     Sempre prezamos pelo bem do próximo. Você pode tanto oferecer um serviço para a comunidade quanto
@@ -65,7 +66,7 @@
             <div class="ComoFuncionaBox BoxVoluntariar">
                 <div class="ComoFuncionaBoxTexto">
                     <h3>Como se <span>Voluntariar </span></h3>
-                    <p>Para se voluntariar, é muito simples!
+                    <p class="delay-fade delay-2">Para se voluntariar, é muito simples!
                         Basta criar um cadastro em nosso sistema e acessar a sessão “Seja Voluntário”.
                         Depois, é só escolher o serviço no qual você deseja se voluntariar.
                         Na página do serviço escolhido, você verá mais detalhes sobre como pode ajudar.
@@ -80,7 +81,7 @@
             <div class="ComoFuncionaBox BoxAjuda">
                 <div class="ComoFuncionaBoxTexto">
                     <h3>Como pedir <span>Ajuda </span>?</h3>
-                    <p>Para pedir ajuda, é muito simples!
+                    <p class="delay-fade delay-3">Para pedir ajuda, é muito simples!
                         Basta criar um cadastro em nosso sistema e acessar a sessão “Peça Ajuda”.
                         Depois, é só escolher o serviço com o qual você precisa de ajuda.
                         Na página do serviço escolhido, você verá mais informações sobre ele.
@@ -138,8 +139,9 @@
         <div class="ComoFuncionaContainer">
 
             <div class="voluntariar">
-                <img src="../img/Carrosel/ConecaLocal IMG.png" alt="Pessoa com colete escrito Voluntario">
+                <img src="../img/Carrosel/ConecaLocal IMG.png" alt="Pessoa com colete escrito Voluntário">
             </div>
+        </div>
     </section>
 
 
@@ -182,13 +184,13 @@
 
 
     <script>
-    const menuButton = document.getElementById('hamburguerButton');
-    const menu = document.getElementById('menuMobile');
+        const menuButton = document.getElementById('hamburguerButton');
+        const menu = document.getElementById('menuMobile');
 
-    menuButton.addEventListener('click', () => {
-        menu.classList.toggle('active');
-    });
-</script>
+        menuButton.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
 
 </body>
 
