@@ -85,6 +85,19 @@
 .swiper-pagination-bullet-active {
      background-color: var(--CorSecundaria)!important;
 }
+
+
+.voluntario01 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.videoVoluntario{
+margin: 2rem;
+}
 /*Fim do Carrossel*/
 
 @media (max-width: 768) {
