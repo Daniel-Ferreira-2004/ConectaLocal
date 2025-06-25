@@ -120,6 +120,9 @@ nav {
 
 }
 
+.ComoFunciona, .façaParte, .empresas {
+    visibility: hidden;
+}
 /*Fim do header*/
 
 /*Chamando Botão*/
