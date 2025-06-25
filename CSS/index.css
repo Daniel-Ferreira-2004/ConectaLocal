@@ -93,10 +93,6 @@ nav {
     transition: 0.8s;
 }
 
-.hamburguer {
-    display: none;
-}
-
 .logo-header img {
     height: 3rem;
 
@@ -411,5 +407,57 @@ span {
 @media (max-width: 578px) {
     .ComoFuncionaBoxTexto {
         padding-bottom: 18em;
+    }
+}
+
+
+
+/* Botão hambúrguer padrão */
+.hamburguer {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .lista-header {
+        display: none; /* FORÇA o ocultamento no mobile */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--CorSecundaria);
+        flex-direction: column;
+        align-items: center;
+        padding: 1em 0;
+    }
+
+    .lista-header.active {
+        display: flex !important; /* Mostra quando ativado via JS */
+    }
+
+    .lista-header ul {
+        flex-direction: column;
+        gap: 1em;
+        margin: 0;
+        padding: 0;
+    }
+
+    .hamburguer {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.8rem;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    .nav {
+        flex-wrap: wrap;
     }
 }
