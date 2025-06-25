@@ -146,7 +146,7 @@ nav {
 
 /*Começo Voluntarios*/
 .containerVoluntarios {
-    margin: 5em 25%;
+    margin: 5em 20%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -157,7 +157,7 @@ nav {
     flex-direction: column;
     justify-content: space-around;
     text-align: start;
-    width: 50%;
+    width: 60%;
     margin-right: 2em;
     color: white;
 }
@@ -217,6 +217,7 @@ p {
 
 .ComoFuncionaBoxTexto p {
     padding: 0,9em;
+    font-size: 17px;
 }
 
 .ComoFuncionaBox img {
