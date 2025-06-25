@@ -16,7 +16,8 @@ const elementosParaAnimar = [
     ".façaParte",
     ".empresas",
     ".Banner",
-    ".swiper-slide"
+    ".swiper-slide",
+    ".voluntario01"
 ];
 
 // Aplica a animação a todos os seletores

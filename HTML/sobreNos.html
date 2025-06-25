@@ -6,35 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/index.css">
     <link rel="stylesheet" href="../CSS/sobreNos.css">
+    <script src="../JS/hamburguer.js" defer></script>
     <title>Sobre Nós</title>
 </head>
 
 <body>
     <header>
-    <nav>
-        <div class="logo-header">
-            <img src="../img/indexIMG/Logo Oficial.png" alt="logo site">
-        </div>
+        <nav>
+            <div class="logo-header">
+                <img src="../img/indexIMG/Logo Oficial.png" alt="logo site">
+            </div>
 
-        <button class="hamburguer" id="hamburguerButton">
-            <i class="fa-solid fa-bars"></i>
-        </button>
+            <button class="hamburguer" id="hamburguerButton">
+                <i class="fa-solid fa-bars"></i>
+            </button>
 
-        <div class="lista-header navPincipal" id="menuMobile">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="sejaVoluntario.html">Seja Voluntário</a></li>
-                <li><a href="sobreNos.html">Sobre nós</a></li>
-                <li class="login-mobile">
-                    <i class="fa-solid fa-user"></i>
-                    <a href="form.html">Entrar</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</header>
+            <div class="lista-header navPincipal" id="menuMobile">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sejaVoluntario.html">Seja Voluntário</a></li>
+                    <li><a href="sobreNos.html">Sobre nós</a></li>
+                    <li class="login-mobile">
+                        <i class="fa-solid fa-user"></i>
+                        <a href="form.html">Entrar</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
     <!--Section 1-->
-
     <section class="section1">
         <div class="sobrenos">
             <div class="façaParteTexto">
@@ -86,9 +87,9 @@
                 </div>
             </div>
         </div>
+    </section>
 
         <!--FOOTER-->
-
         <footer class="footer">
             <div class="footer-container">
                 <div class="footer-section">
@@ -105,29 +106,18 @@
                 </div>
                 <div class="footer-section">
                     <h3>Redes Sociais</h3>
-                 <div class="sociais-icons">
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                </div>
+                    <div class="sociais-icons">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 Conecta Local. Todos os direitos reservados.</p>
             </div>
         </footer>
-
-
-        <script>
-    const menuButton = document.getElementById('hamburguerButton');
-    const menu = document.getElementById('menuMobile');
-
-    menuButton.addEventListener('click', () => {
-        menu.classList.toggle('active');
-    });
-    
-</script>
 </body>
 
 </html>

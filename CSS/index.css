@@ -62,7 +62,6 @@ header {
     left: 0;
     z-index: 999;
     width: 100%;
-
 }
 
 nav {
@@ -120,7 +119,7 @@ nav {
 
 }
 
-.ComoFunciona, .façaParte, .empresas, .Banner, .swiper-slide {
+.ComoFunciona, .façaParte, .empresas, .Banner, .swiper-slide, .voluntario01 {
     visibility: hidden;
 }
 /*Fim do header*/
@@ -264,8 +263,6 @@ p {
     margin: 1em;
 }
 
-
-
 /*Fim Como funciona*/
 
 /*Começo Faça Parte*/
@@ -402,6 +399,7 @@ span {
 }
 
 /*Fim Footer*/
+
 /* Botão hambúrguer padrão */
 .hamburguer {
     display: none;
