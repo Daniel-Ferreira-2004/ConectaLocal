@@ -1,49 +1,28 @@
-// Função para mostrar ou esconder as setas dependendo do tamanho da tela
-function toggleArrows() {
-    const next = document.querySelector('.swiper-button-next');
-    const prev = document.querySelector('.swiper-button-prev');
-
-    if (window.innerWidth <= 768) {
-        next.style.display = 'none';
-        prev.style.display = 'none';
-    } else {
-        next.style.display = 'block';
-        prev.style.display = 'block';
-    }
-}
-
-// Cria o carrossel Swiper
 const swiper = new Swiper('.swiper', {
-    slidesPerView: 3,          // Quantos slides aparecem por vez (mobile)
-    spaceBetween: 5,          // Espaço entre os slides
-    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 16,
+    centeredSlides: false,
+    loop: true, // ← aqui está a mudança chave!
 
     navigation: {
-        nextEl: '.swiper-button-next', // Botão próximo
-        prevEl: '.swiper-button-prev', // Botão anterior
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
     },
 
     pagination: {
-        el: '.swiper-pagination',      // Bolinhas de paginação
-        clickable: true,               // Permite clicar nas bolinhas
+        el: '.swiper-pagination',
+        clickable: true,
     },
 
-    // Configurações responsivas
     breakpoints: {
         640: {
-            slidesPerView: 2,          // Em telas a partir de 640px -> 2 slide
+            slidesPerView: 2,
         },
         768: {
-            slidesPerView: 3,          // A partir de 768px -> 3 slides
+            slidesPerView: 3,
         },
         1024: {
-            slidesPerView: 4,          // A partir de 1024px -> 4 slides
+            slidesPerView: 4,
         },
     },
 });
-
-// Executa quando a página carrega
-window.addEventListener('load', toggleArrows);
-
-// Executa toda vez que redimensiona a janela
-window.addEventListener('resize', toggleArrows);
