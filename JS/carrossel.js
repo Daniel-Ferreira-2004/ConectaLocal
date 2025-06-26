@@ -1,27 +1,22 @@
 const swiper = new Swiper('.swiper', {
-    slidesPerView: 2,
     spaceBetween: 10,
-    centeredSlides: false,
-
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+    slidesPerView: 5,
+     autoplay: {
+        delay: 2000,
+        disableOnInteraction: false, //Continua o autoPlay mesmo se o usuario interagir
     },
 
+    fadeEffect: {CrossFade: true}, //Permite a troca de imagem pelo deslizar do usuario
+    allowTouchMove: true,
     pagination: {
         el: '.swiper-pagination',
+        type: 'bullets',
         clickable: true,
+
+    },
+    navigation: {
+        nextEl: '.swiper-button-next', // Botão próximo
+        prevEl: '.swiper-button-prev', // Botão anterior
     },
 
-    breakpoints: {
-        640: {
-            slidesPerView: 2,
-        },
-        768: {
-            slidesPerView: 3,
-        },
-        1024: {
-            slidesPerView: 4,
-        },
-    },
 });
