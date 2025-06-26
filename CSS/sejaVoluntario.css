@@ -1,4 +1,3 @@
-
 /*Começo do Banner*/
 .Banner {
     background: url(../img/Carrosel/Union.png);
@@ -19,6 +18,7 @@
     color: white;
     height: 10em;
 }
+
 /*Fim do Banner*/
 
 /*Começo do Carrossel*/
@@ -28,12 +28,14 @@
     display: flex;
     justify-content: center;
     align-items: stretch;
+
 }
 
 .swiper-wrapper {
     padding: 0;
     display: flex;
     align-items: stretch;
+
 }
 
 .swiper {
@@ -47,8 +49,6 @@
     background-size: cover;
     width: 100%;
     height: 38em;
-    /* <- Slide ocupa 100% do espaço disponível */
-    /* <- Limita no desktop */
     flex-direction: column;
     text-align: center;
     color: white;
@@ -75,14 +75,15 @@
 
 .swiper-button-prev,
 .swiper-button-next {
-    color: var(--CorSecundaria)!important;
+    color: var(--CorSecundaria) !important;
     padding: 1em 1.5em;
     border-radius: 100%;
 }
 
 .swiper-pagination-bullet-active {
-     background-color: var(--CorSecundaria)!important;
+    background-color: var(--CorSecundaria) !important;
 }
+
 /*Fim do Carrossel*/
 
 .voluntario01 {
@@ -92,29 +93,35 @@
     justify-content: center;
 }
 
-.videoVoluntario{
-margin: 2rem;
+.videoVoluntario {
+    margin: 2rem;
+}
+
+.conteudoFinal {
+    padding: 10em 0;
 }
 
 @media (max-width: 768px) {
     html {
-        font-size: 40%;
+        font-size: 50%;
     }
-
     .swiper-button-prev,
     .swiper-button-next {
         display: none !important;
     }
 
+    .btn, p {
+        font-size: 90%;
+    }
     .carrosselCard {
         width: 90%;
     }
 
     .img-voluntario {
-        width: 300px;   
+        width: 300px;
     }
 
     video {
-        width:300px ;
+        width: 300px;
     }
 }

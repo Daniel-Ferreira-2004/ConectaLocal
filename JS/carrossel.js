@@ -1,8 +1,7 @@
 const swiper = new Swiper('.swiper', {
-    slidesPerView: 1,
-    spaceBetween: 16,
+    slidesPerView: 2,
+    spaceBetween: 10,
     centeredSlides: false,
-    loop: true, // ← aqui está a mudança chave!
 
     navigation: {
         nextEl: '.swiper-button-next',
