@@ -7,15 +7,23 @@ if (!isset($_SESSION['usuario_id'])) {
     exit;
 }
 
+// Inclui a conexão com o banco
 include_once('config.php');
 
-// Pega os dados da sessão e do POST
+// Inclui os arquivos do PHPMailer
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'phpmailer/src/Exception.php';
+require 'phpmailer/src/PHPMailer.php';
+require 'phpmailer/src/SMTP.php';
+
+// Pega os dados do usuário e do serviço
 $id_usuario = $_SESSION['usuario_id'];
 $id_servico = $_POST['id_servico'] ?? null;
 
-// Verifica se veio o id do serviço
 if ($id_servico) {
-    // Verifica se já está cadastrado como voluntário
+    // Verifica se já é voluntário
     $check = $conexao->prepare("SELECT id FROM voluntarios_servicos WHERE id_usuario = ? AND id_servico = ?");
     $check->bind_param("ii", $id_usuario, $id_servico);
     $check->execute();
@@ -29,17 +37,36 @@ if ($id_servico) {
         $insert->bind_param("ii", $id_usuario, $id_servico);
 
         if ($insert->execute()) {
-            // Envia e-mail de confirmação
+            // Dados do usuário para o e-mail
             $usuario_email = $_SESSION['usuario_email'];
-            $assunto = "Cadastro como voluntário confirmado";
-            $mensagem = "Olá! Você se cadastrou como voluntário para o serviço ID $id_servico. Agora, você será notificado quando alguém solicitar ajuda nesse serviço.";
-            $headers = "From: danikferreira69@gmail.com\r\nReply-To:$usuario_email\r\n";
 
-            mail($usuario_email, $assunto, $mensagem, $headers);
+            // Inicia o PHPMailer
+            $mail = new PHPMailer(true);
+            try {
+                $mail->isSMTP();
+                $mail->Host = 'smtp.gmail.com';
+                $mail->SMTPAuth = true;
+                $mail->Username = 'danikferreira69@gmail.com'; // Seu email Gmail
+                $mail->Password = 'vbytqonrbkdqfybb'; // Senha de app do Gmail
+                $mail->SMTPSecure = 'tls';
+                $mail->Port = 587;
+
+                $mail->setFrom('danikferreira69@gmail.com', 'Conecta Local');
+                $mail->addAddress($usuario_email);
+
+                $mail->isHTML(true);
+                $mail->Subject = 'Cadastro como voluntário confirmado';
+                $mail->Body = "Olá!<br>Você se cadastrou como voluntário para o serviço ID <strong>$id_servico</strong>.<br>Agora, você será notificado quando alguém solicitar ajuda nesse serviço.";
+                $mail->AltBody = "Olá! Você se cadastrou como voluntário para o serviço ID $id_servico.";
+
+                $mail->send();
+            } catch (Exception $e) {
+                error_log("Erro ao enviar e-mail: {$mail->ErrorInfo}");
+                // Email falhou, mas cadastro foi feito
+            }
 
             echo "<script>
-                alert('Cadastro realizado com sucesso!</br>
-                 Você receberá um e-mail de confirmação e será notificado quando alguém pedir ajuda neste serviço.');
+                alert('Cadastro realizado com sucesso!\\nVocê receberá um e-mail de confirmação e será notificado quando alguém pedir ajuda neste serviço.');
                 window.history.back();
             </script>";
         } else {

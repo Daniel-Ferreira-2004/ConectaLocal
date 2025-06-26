@@ -39,7 +39,7 @@ if (isset($_POST['submit'])) {
 
         if ($verifica->num_rows > 0) {
             // Já existe um registro com esse e-mail
-            echo "<script>alert('Este e-mail já está cadastrado!');  window.location.href = '../form.html';</script>";
+            echo "<script>alert('Este e-mail já está cadastrado!');  window.location.href = '../HTML/form.html';</script>";
         } else {
             // Prepara uma declaração SQL segura com "?" como marcadores de posição
             // Isso evita SQL Injection
@@ -54,7 +54,7 @@ if (isset($_POST['submit'])) {
 
             // Executa a consulta SQL com os dados inseridos
             if ($stmt->execute()) {
-                echo "<script>alert('Usuário cadastrado com sucesso!'); window.location.href = '../php/form.html';</script>";
+                echo "<script>alert('Usuário cadastrado com sucesso!'); window.location.href = '../HTML/form.html';</script>";
             } else {
                 // Mostra o erro caso a execução falhe
                 echo "<script>alert('Erro ao cadastrar: " . $stmt->error . "'); window.history.back();</script>";

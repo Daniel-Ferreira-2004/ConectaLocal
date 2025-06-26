@@ -407,6 +407,13 @@ span {
 }
 /* Responsividade */
 
+.login-mobile span {
+    color: white;
+    font-size: 1.2em;
+    padding-right: 1em;
+    font-weight: 400;
+}
+
 @media (max-width: 768px) {
     html {
         font-size: 70%;
