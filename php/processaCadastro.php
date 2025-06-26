@@ -54,7 +54,7 @@ if (isset($_POST['submit'])) {
 
             // Executa a consulta SQL com os dados inseridos
             if ($stmt->execute()) {
-                echo "<script>alert('Usuário cadastrado com sucesso!'); window.location.href = '../form.html';</script>";
+                echo "<script>alert('Usuário cadastrado com sucesso!'); window.location.href = '../php/form.html';</script>";
             } else {
                 // Mostra o erro caso a execução falhe
                 echo "<script>alert('Erro ao cadastrar: " . $stmt->error . "'); window.history.back();</script>";

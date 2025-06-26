@@ -22,7 +22,15 @@
             </div>
 
             <button class="hamburguer" id="hamburguerButton">
-                <i class="fa-solid fa-bars"></i>
+
+                </div>
+
+                <button class="hamburguer" id="hamburguerButton">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+
+                "></i>
             </button>
 
             <div class="lista-header navPincipal" id="menuMobile">
@@ -58,7 +66,15 @@
                             <h2>Aulas Particulares</h2>
                             <p>Aqui você pode encontrar professores particulares para te ensinar! </p>
                         </div>
-                        <a href="form.html"><button class="btn">Seja Voluntário</button></a>
+                        <form action="voluntariar.php" method="POST">
+                            <input type="hidden" name="id_servico" value="1"> <!-- ID do card -->
+                            <button type="submit" class="btn">Seja Voluntário</button>
+                        </form>
+                        <form action="pedirAjuda.php" method="POST">
+                            <input type="hidden" name="id_servico" value="1">
+                            <button type="submit" class="btn">Peça Ajuda</button>
+                        </form>
+
                     </div>
                 </div>
 
@@ -73,6 +89,7 @@
                             <p>Doe ou encontre quem precisa!</p>
                         </div>
                         <a href="form.html"><button class="btn">Seja Voluntário</button></a>
+                        <a href="form.html"><button class="btn">Peça Ajuda</button></a>
                     </div>
                 </div>
                 <!-- box/carrosel 3 -->
@@ -88,6 +105,7 @@
 
                         </div>
                         <a href="form.html"><button class="btn">Seja Voluntário</button></a>
+                        <a href="form.html"><button class="btn">Seja Voluntário</button></a>
                     </div>
                 </div>
                 <!-- box/carrosel 4 -->
@@ -101,6 +119,7 @@
                             <h2>Auxílio tarefas domesticas</h2>
                             <p>Precisa de ajuda com tarefas de casa? Pintar, manutenção, trocar chuveiro...</p>
                         </div>
+                        <a href="form.html"><button class="btn">Seja Voluntário</button></a>
                         <a href="form.html"><button class="btn">Seja Voluntário</button></a>
                     </div>
                     <!-- box/carrosel 5 -->
@@ -116,6 +135,7 @@
                             </p>
                         </div>
                         <a href="form.html"><button class="btn">Seja Voluntário</button></a>
+                        <a href="form.html"><button class="btn">Seja Voluntário</button></a>
                     </div>
                 </div>
                 <!-- box/carrosel 6 -->
@@ -128,6 +148,7 @@
                             <h2>Eventos festivos</h2>
                             <p>Ajude e partice de nossos eventos comemorativos!</p>
                         </div>
+                        <a href="form.html"><button class="btn">Seja Voluntário</button></a>
                         <a href="form.html"><button class="btn">Seja Voluntário</button></a>
                     </div>
                     <!-- box/carrosel 7 -->
@@ -142,6 +163,7 @@
                             <p>Nos ajude cuidado do meio ambiente de nossa comunidade!</p>
                         </div>
                         <a href="form.html"><button class="btn">Seja Voluntário</button></a>
+                        <a href="form.html"><button class="btn">Seja Voluntário</button></a>
                     </div>
                 </div>
 
@@ -150,7 +172,7 @@
 
             <!-- Setas -->
             <div class="swiper-button-prev btn"></div>
-            <div class="swiper-button-next btn"></div>
+            <div class="swiper-button-next"></div>
 
             <!-- Paginação (bolinhas) -->
             <div class="swiper-pagination"></div>
@@ -175,6 +197,7 @@
                             <p>Precisa de ajuda com tarefas de casa? Pintar, manutenção, trocar chuveiro...</p>
                         </div>
                         <a href="form.html"><button class="btn">Seja Voluntário</button></a>
+                        <a href="form.html"><button class="btn">Seja Voluntário</button></a>
                     </div>
                 </div>
 
@@ -190,6 +213,7 @@
                                 ajudar nas nescessidades de casa...</p>
                         </div>
                         <a href="form.html"><button class="btn">Seja Voluntário</button></a>
+                        <a href="form.html"><button class="btn">Seja Voluntário</button></a>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -199,8 +223,10 @@
                         </div>
                         <div class="carroselCardTexto">
                             <h2>Apoio digital</h2>
-                            <p>Precisa de ajuda para conseguir mexer no celular, computador ou qualquer dispositivo ?</p>
+                            <p>Precisa de ajuda para conseguir mexer no celular, computador ou qualquer dispositivo ?
+                            </p>
                         </div>
+                        <a href="form.html"><button class="btn">Seja Voluntário</button></a>
                         <a href="form.html"><button class="btn">Seja Voluntário</button></a>
                     </div>
                 </div>
@@ -214,17 +240,6 @@
                             <p>Precisa fazer compras mas não consegue ir buscar no mercado ?</p>
                         </div>
                         <a href="form.html"><button class="btn">Seja Voluntário</button></a>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="carrosselCard">
-                        <div class="carrosselimg">
-                            <img src="../img/Carrosel/imagem de doação de alimento.png" alt="Doação">
-                        </div>
-                        <div class="carroselCardTexto">
-                            <h2>Doação de Alimentos</h2>
-                            <p>Doe ou encontre quem precisa!</p>
-                        </div>
                         <a href="form.html"><button class="btn">Seja Voluntário</button></a>
                     </div>
                 </div>
@@ -238,6 +253,7 @@
                             <p>Doe ou encontre quem precisa!</p>
                         </div>
                         <a href="form.html"><button class="btn">Seja Voluntário</button></a>
+                        <a href="form.html"><button class="btn">Seja Voluntário</button></a>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -249,6 +265,20 @@
                             <h2>Doação de Alimentos</h2>
                             <p>Doe ou encontre quem precisa!</p>
                         </div>
+                        <a href="form.html"><button class="btn">Seja Voluntário</button></a>
+                        <a href="form.html"><button class="btn">Seja Voluntário</button></a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="carrosselCard">
+                        <div class="carrosselimg">
+                            <img src="../img/Carrosel/imagem de doação de alimento.png" alt="Doação">
+                        </div>
+                        <div class="carroselCardTexto">
+                            <h2>Doação de Alimentos</h2>
+                            <p>Doe ou encontre quem precisa!</p>
+                        </div>
+                        <a href="form.html"><button class="btn">Seja Voluntário</button></a>
                         <a href="form.html"><button class="btn">Seja Voluntário</button></a>
                     </div>
                 </div>
@@ -258,6 +288,8 @@
 
             <!-- Setas -->
             <div class="swiper-button-prev btn"></div>
+            <div class="swiper-button-next
+              <div class=" swiper-button-prev btn"></div>
             <div class="swiper-button-next btn"></div>
 
             <!-- Paginação (bolinhas) -->
@@ -283,6 +315,7 @@
                             <p>Ajude com aulas ou encontre quem te ajude!</p>
                         </div>
                         <a href="form.html"><button class="btn">Seja Voluntário</button></a>
+                        <a href="form.html"><button class="btn">Seja Voluntário</button></a>
                     </div>
                 </div>
 
@@ -297,17 +330,6 @@
                             <p>Doe ou encontre quem precisa!</p>
                         </div>
                         <a href="form.html"><button class="btn">Seja Voluntário</button></a>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="carrosselCard">
-                        <div class="carrosselimg">
-                            <img src="../img/Carrosel/imagem de doação de alimento.png" alt="Doação">
-                        </div>
-                        <div class="carroselCardTexto">
-                            <h2>Doação de Alimentos</h2>
-                            <p>Doe ou encontre quem precisa!</p>
-                        </div>
                         <a href="form.html"><button class="btn">Seja Voluntário</button></a>
                     </div>
                 </div>
@@ -321,17 +343,6 @@
                             <p>Doe ou encontre quem precisa!</p>
                         </div>
                         <a href="form.html"><button class="btn">Seja Voluntário</button></a>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="carrosselCard">
-                        <div class="carrosselimg">
-                            <img src="../img/Carrosel/imagem de doação de alimento.png" alt="Doação">
-                        </div>
-                        <div class="carroselCardTexto">
-                            <h2>Doação de Alimentos</h2>
-                            <p>Doe ou encontre quem precisa!</p>
-                        </div>
                         <a href="form.html"><button class="btn">Seja Voluntário</button></a>
                     </div>
                 </div>
@@ -345,6 +356,7 @@
                             <p>Doe ou encontre quem precisa!</p>
                         </div>
                         <a href="form.html"><button class="btn">Seja Voluntário</button></a>
+                        <a href="form.html"><button class="btn">Seja Voluntário</button></a>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -356,6 +368,33 @@
                             <h2>Doação de Alimentos</h2>
                             <p>Doe ou encontre quem precisa!</p>
                         </div>
+                        <a href="form.html"><button class="btn">Seja Voluntário</button></a>
+                        <a href="form.html"><button class="btn">Seja Voluntário</button></a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="carrosselCard">
+                        <div class="carrosselimg">
+                            <img src="../img/Carrosel/imagem de doação de alimento.png" alt="Doação">
+                        </div>
+                        <div class="carroselCardTexto">
+                            <h2>Doação de Alimentos</h2>
+                            <p>Doe ou encontre quem precisa!</p>
+                        </div>
+                        <a href="form.html"><button class="btn">Seja Voluntário</button></a>
+                        <a href="form.html"><button class="btn">Seja Voluntário</button></a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="carrosselCard">
+                        <div class="carrosselimg">
+                            <img src="../img/Carrosel/imagem de doação de alimento.png" alt="Doação">
+                        </div>
+                        <div class="carroselCardTexto">
+                            <h2>Doação de Alimentos</h2>
+                            <p>Doe ou encontre quem precisa!</p>
+                        </div>
+                        <a href="form.html"><button class="btn">Seja Voluntário</button></a>
                         <a href="form.html"><button class="btn">Seja Voluntário</button></a>
                     </div>
                 </div>
@@ -365,6 +404,8 @@
 
             <!-- Setas -->
             <div class="swiper-button-prev btn"></div>
+            <div class="swiper-button-next
+              <div class=" swiper-button-prev btn"></div>
             <div class="swiper-button-next btn"></div>
 
             <!-- Paginação (bolinhas) -->
@@ -391,16 +432,6 @@
         <video src="/CSS/video/VID-20250524-WA0056.mp4" controls></video>
 
     </section>
-
-
-    <script>
-        const menuButton = document.getElementById('hamburguerButton');
-        const menu = document.getElementById('menuMobile');
-
-        menuButton.addEventListener('click', () => {
-            menu.classList.toggle('active');
-        });
-    </script>
 </body>
 
 </html>

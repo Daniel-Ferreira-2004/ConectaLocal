@@ -90,18 +90,17 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
 }
 
 .videoVoluntario{
 margin: 2rem;
 }
 
-
 @media (max-width: 768px) {
     html {
         font-size: 40%;
     }
+
     .swiper-button-prev,
     .swiper-button-next {
         display: none !important;
@@ -110,11 +109,11 @@ margin: 2rem;
     .carrosselCard {
         width: 90%;
     }
+
     .img-voluntario {
-        width: 300px;
-        
-        
+        width: 300px;   
     }
+
     video {
         width:300px ;
     }

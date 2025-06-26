@@ -71,7 +71,7 @@ try {
 
     // Envia o e-mail
     $mail->send();
-    echo "<script>alert('Nova Senha Enviada para seu Email (verificar Spam)'); window.location.href = '../form.html';</script>";
+    echo "<script>alert('Nova Senha Enviada para seu Email (verificar Spam)'); window.location.href = '../HTML/sejaVoluntario.html';</script>";
 } catch (Exception $e) {
     // Caso ocorra erro ao enviar
     echo "Erro ao enviar e-mail: {$mail->ErrorInfo}";
