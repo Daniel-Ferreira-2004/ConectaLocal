@@ -51,6 +51,7 @@ $mail = new PHPMailer(true); // true ativa o modo "exceptions" para capturar err
 
 try {
     // Configuração do servidor SMTP do Gmail
+    $mail->CharSet = 'UTF-8';
     $mail->isSMTP(); // Define o tipo de envio como SMTP
     $mail->Host = 'smtp.gmail.com'; // Servidor de e-mail
     $mail->SMTPAuth = true; // Ativa autenticação

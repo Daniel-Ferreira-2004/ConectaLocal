@@ -43,6 +43,7 @@ if ($id_servico) {
             // Inicia o PHPMailer
             $mail = new PHPMailer(true);
             try {
+                $mail->CharSet = 'UTF-8';
                 $mail->isSMTP();
                 $mail->Host = 'smtp.gmail.com';
                 $mail->SMTPAuth = true;
