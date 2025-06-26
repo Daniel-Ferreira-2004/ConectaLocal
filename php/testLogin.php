@@ -1,42 +1,45 @@
 <?php
+session_start();
+
 if (isset($_POST["submit"]) && !empty($_POST['email']) && !empty($_POST['passwords'])) {
 
     include_once('config.php');
 
-    // Captura e sanitiza os dados
+    // Sanitiza dados
     $email = strtolower(trim($_POST['email']));
     $senha = $_POST['passwords'];
 
-    // Prepara a consulta para verificar se o e-mail existe
-    $stmt = $conexao->prepare("SELECT senha FROM formulariodaniel WHERE LOWER(TRIM(email)) = ?");
+    // Prepara consulta para pegar id, email e senha
+    $stmt = $conexao->prepare("SELECT id, email, senha FROM formulariodaniel WHERE LOWER(TRIM(email)) = ?");
     $stmt->bind_param("s", $email);
     $stmt->execute();
-
-    // Usa store_result() ao invés de get_result()
     $stmt->store_result();
 
     if ($stmt->num_rows === 1) {
-        // Liga a variável ao resultado da coluna "senha"
-        $stmt->bind_result($senhaHash);
+        // Liga variáveis aos resultados
+        $stmt->bind_result($id, $emailBanco, $senhaHash);
         $stmt->fetch();
 
-        // Verifica se a senha informada bate com o hash no banco
+        // Verifica senha
         if (password_verify($senha, $senhaHash)) {
-            echo "<script>alert('Login realizado com sucesso!'); window.location.href = 'sistema.php';</script>";
+            // Guarda dados na sessão
+            $_SESSION['usuario_id'] = $id;
+            $_SESSION['usuario_email'] = $emailBanco;
+
+            echo "<script>alert('Login realizado com sucesso!'); window.location.href = '../HTML/sejaVoluntario.html';</script>";
         } else {
-            echo "<script>alert('Senha inválida.'); window.location.href = '../form.html';</script>";
+            echo "<script>alert('Senha inválida.'); window.location.href = '../HTML/form.html';</script>";
         }
     } else {
-        echo "<script>alert('Email não cadastrado.'); window.location.href = '../form.html';</script>";
+        echo "<script>alert('Email não cadastrado.'); window.location.href = '../HTML/form.html';</script>";
     }
 
-    // Fecha a consulta e a conexão
     $stmt->close();
     $conexao->close();
 
 } else {
-    // Redireciona se os campos obrigatórios não estiverem preenchidos
-    header("Location: ../form.html");
+    header("Location: ../HTML/form.html");
     exit;
 }
 ?>
+

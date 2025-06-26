@@ -7,9 +7,12 @@
     <link rel="stylesheet" href="../CSS/index.css">
     <link rel="stylesheet" href="../CSS/sejaVoluntario.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://kit.fontawesome.com/95cc33972b.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="../JS/logado.js" defer></script>
     <script src="../JS/script.js" defer></script>
     <script src="../JS/carrossel.js" defer></script>
+    <script src="../JS/hamburguer.js" defer></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <title>Seja Voluntario</title>
 </head>
@@ -22,15 +25,7 @@
             </div>
 
             <button class="hamburguer" id="hamburguerButton">
-
-                </div>
-
-                <button class="hamburguer" id="hamburguerButton">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-
-
-                "></i>
+                <i class="fa-solid fa-bars"></i>
             </button>
 
             <div class="lista-header navPincipal" id="menuMobile">
@@ -41,11 +36,21 @@
                     <li class="login-mobile">
                         <i class="fa-solid fa-user"></i>
                         <a href="form.html">Entrar</a>
+                        <span id="nomeUsuario"></span>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
+    <!--Banner-->
+    <section class="Banner">
+        <div class="BannerContainer">
+            <div class="BannerTexto">
+                <h2>Seja um <span>Voluntario</span> e ajude quem precisa !</h2>
+            </div>
+        </div>
+    </section>
+    <!--Fim Banner-->
 
     <!-- Swiper -->
     <!--Carrossel 1-->
@@ -66,15 +71,14 @@
                             <h2>Aulas Particulares</h2>
                             <p>Aqui você pode encontrar professores particulares para te ensinar! </p>
                         </div>
-                        <form action="voluntariar.php" method="POST">
+                        <form action="../php/voluntariar.php" method="POST">
                             <input type="hidden" name="id_servico" value="1"> <!-- ID do card -->
                             <button type="submit" class="btn">Seja Voluntário</button>
                         </form>
-                        <form action="pedirAjuda.php" method="POST">
+                        <form action="../php/pedirAjuda.php" method="POST">
                             <input type="hidden" name="id_servico" value="1">
                             <button type="submit" class="btn">Peça Ajuda</button>
                         </form>
-
                     </div>
                 </div>
 
@@ -404,14 +408,12 @@
 
             <!-- Setas -->
             <div class="swiper-button-prev btn"></div>
-            <div class="swiper-button-next
-              <div class=" swiper-button-prev btn"></div>
-            <div class="swiper-button-next btn"></div>
+            <div class="swiper-button-next">
 
-            <!-- Paginação (bolinhas) -->
-            <div class="swiper-pagination"></div>
-        </div>
-        <!--Fechamento Carrossel 3-->
+                <!-- Paginação (bolinhas) -->
+                <div class="swiper-pagination"></div>
+            </div>
+            <!--Fechamento Carrossel 3-->
 
 
     </section>
@@ -420,7 +422,7 @@
         <div class="Linha"></div>
     </div>
     <section class="voluntario01">
-        <img src="/img/indexIMG/seja-voluntario.png" alt="mãos coloridas" class="img-voluntario">
+        <img src="../img/indexIMG/seja-voluntario.png" alt="mãos coloridas" class="img-voluntario">
 
     </section>
 
@@ -429,7 +431,7 @@
         <div class="Linha"></div>
     </div>
     <section class="voluntario01 videoVoluntario">
-        <video src="/CSS/video/VID-20250524-WA0056.mp4" controls></video>
+        <video src="../CSS/video/VID-20250524-WA0056.mp4" controls></video>
 
     </section>
 </body>
