@@ -19,7 +19,6 @@
     color: white;
     height: 10em;
 }
-
 /*Fim do Banner*/
 
 /*Começo do Carrossel*/
@@ -85,7 +84,7 @@
 .swiper-pagination-bullet-active {
      background-color: var(--CorSecundaria)!important;
 }
-
+/*Fim do Carrossel*/
 
 .voluntario01 {
     display: flex;
@@ -98,7 +97,7 @@
 .videoVoluntario{
 margin: 2rem;
 }
-/*Fim do Carrossel*/
+
 
 @media (max-width: 768px) {
     html {
