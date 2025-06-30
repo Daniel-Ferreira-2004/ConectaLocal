@@ -89,4 +89,4 @@ ConectaLocal/
 
 ## 🚀 Link do Projeto no GitHub Pages
 
-A versão frontend está disponível em: [ConectaLocal no GitHub Pages](https://daniel-ferreira-2004.github.io/ConectaLocal/)
+A versão frontend está disponível em: [ConectaLocal no GitHub Pages]([https://daniel-ferreira-2004.github.io/ConectaLocal/](https://daniel-ferreira-2004.github.io/ConectaLocal/))
