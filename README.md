@@ -56,6 +56,7 @@ A interface do site foi desenvolvida com o conceito **Mobile First**, garantindo
 ConectaLocal/
 ├── HTML/
 │   └── form.html              # Página de cadastro/login
+    └── index.html             # Página inicial do site
 ├── CSS/
 │   └── style.css              # Estilos principais
 ├── JS/
@@ -70,7 +71,6 @@ ConectaLocal/
 │   ├── pedirAjuda.php         # Envia email aos voluntários
 │   └── verificarSessao.php    # Verifica se o usuário está logado
 ├── phpmailer/                 # Biblioteca PHPMailer
-└── index.html                 # Página inicial do site
 ```
 
 ## 📦 Como Executar Localmente
