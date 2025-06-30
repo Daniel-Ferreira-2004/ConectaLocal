@@ -80,6 +80,10 @@ ConectaLocal/
 2. Instale o banco de dados MySQL e configure o arquivo `php/config.php` com seus dados locais.
 
 3. Crie as tabelas no banco conforme o modelo utilizado (pode ser extraído das queries no código).
+
+4. QR CODE:
+  ![frame](https://github.com/user-attachments/assets/c6d8313e-072f-49f6-804b-137d79e16bcc)
+
    
 4.Coloque a pasta do projeto junto ao HTDOCS do XAMPP. 
 
