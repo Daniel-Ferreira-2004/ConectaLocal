@@ -1,93 +1,92 @@
-# 📌 ConectaLocal
 
-## 1. Descrição do Projeto
+# ConectaLocal
 
-O **ConectaLocal** é uma plataforma web voltada para conectar voluntários a pessoas que precisam de ajuda. O site permite que usuários se cadastrem, façam login, escolham serviços nos quais desejam se voluntariar e sejam notificados via e-mail quando alguém solicita ajuda nesses serviços.
+ConectaLocal é uma plataforma comunitária desenvolvida para facilitar a conexão entre pessoas que desejam oferecer ou solicitar ajuda por meio de serviços voluntários. O foco é criar uma rede de apoio solidário, especialmente voltada para idosos e pessoas com dificuldades de locomoção ou acesso digital.
 
-## 2. Funcionalidades Principais
+## 👨‍💻 Participantes
 
-- Cadastro de usuários com nome, e-mail, senha, telefone e endereço.
-- Login com verificação de senha (hash).
-- Sessões PHP para manter o usuário autenticado.
-- Escolha de serviços voluntários (Aulas Particulares, Doação de Alimentos, Compras para idosos etc).
-- Envio de e-mails automáticos via PHPMailer:
-  - Confirmação de cadastro como voluntário.
-  - Notificação para voluntários quando alguém pede ajuda.
-- Área protegida que exige autenticação para solicitar ajuda ou se voluntariar.
+- Daniel Ferreira (Desenvolvimento Full Stack)
+- Gabriel Canashiro (Desenvolvimento Front)
+- Vinnicius (Desenvolvimento Front)
+- Welton (Desenvolvimento Front)
+- Henrrique (Desenvolvimento Front)
 
-## 3. Tecnologias Utilizadas
+## 🎯 Objetivo do Projeto
 
-| Camada              | Tecnologias/Frameworks                                    |
-|---------------------|-----------------------------------------------------------|
-| Backend             | PHP, MySQL                                                |
-| Envio de E-mails    | PHPMailer                                                 |
-| Frontend            | HTML5, CSS3, JavaScript, Swiper.js                        |
-| Autenticação        | `password_hash()` / `password_verify()`, `session_start()`|
-| Segurança SQL       | `mysqli` com `prepare` e `bind_param`                     |
-| AJAX                | Fetch API para exibir nome de usuário logado             |
+O objetivo principal é incentivar a solidariedade local, conectando voluntários a pessoas que precisam de assistência em atividades cotidianas, como:
 
-## 4. Banco de Dados
+- Aulas particulares
+- Doações de alimentos
+- Apoio psicológico
+- Tarefas domésticas
+- Transporte para idosos
+- Apoio digital
+- Entre outros serviços
 
-### Estrutura:
+## 🧰 Tecnologias Utilizadas
 
-- **formulariodaniel** (tabela de usuários):
-  - `id`, `nome`, `sobrenome`, `email`, `senha`, `telefone`, `endereco`
+### 🔙 Backend
 
-- **servicos**:
-  - `id`, `nome_servico`
+- **PHP:** Utilizado para processar os dados do formulário, autenticação, cadastro e envio de e-mails.
+- **MySQL:** Banco de dados relacional utilizado para armazenar informações dos usuários, serviços e voluntários.
+- **PHPMailer:** Biblioteca PHP para envio de e-mails por SMTP.
 
-- **voluntarios_servicos**:
-  - `id`, `id_usuario`, `id_servico`
+### 🌐 Frontend
 
-## 5. Organização de Arquivos
+- **HTML5 & CSS3:** Estruturação semântica e estilização responsiva do site.
+- **JavaScript:** Dinamização da interface com foco em:
+  - Manipulação do DOM
+  - Validação de formulários
+  - Controle de sessão (verificação de login)
+- **SwiperJS:** Biblioteca para criação do carrossel responsivo de serviços voluntários.
+
+### 📱 Responsividade
+
+A interface do site foi desenvolvida com o conceito **Mobile First**, garantindo uma boa experiência em smartphones, tablets e desktops. O layout se adapta automaticamente ao tamanho da tela, incluindo o comportamento do carrossel.
+
+## 🗃️ Estrutura do Banco de Dados
+
+- **Tabela `formulariodaniel`:** Armazena os dados dos usuários (nome, email, senha, telefone, endereço).
+- **Tabela `servicos`:** Contém os tipos de serviços disponíveis (ex: Apoio digital, Doação de alimentos, etc).
+- **Tabela `voluntarios_servicos`:** Relaciona os usuários aos serviços em que são voluntários.
+
+## 📁 Estrutura do Projeto
 
 ```
-/
+ConectaLocal/
 ├── HTML/
+│   └── form.html              # Página de cadastro/login
 ├── CSS/
+│   └── style.css              # Estilos principais
 ├── JS/
-├── PHP/
-│   ├── config.php
-│   ├── login.php
-│   ├── logout.php
-│   ├── voluntariar.php
-│   ├── pedirAjuda.php
-│   ├── check_login.php
-├── phpmailer/
+│   └── script.js              # Scripts de interação e carrossel
+├── img/
+│   └── Carrosel/              # Imagens dos serviços
+├── php/
+│   ├── config.php             # Conexão com banco de dados
+│   ├── cadastrar.php          # Cadastro de novos usuários
+│   ├── login.php              # Login e sessão
+│   ├── voluntariar.php        # Cadastrar voluntário para serviço
+│   ├── pedirAjuda.php         # Envia email aos voluntários
+│   └── verificarSessao.php    # Verifica se o usuário está logado
+├── phpmailer/                 # Biblioteca PHPMailer
+└── index.html                 # Página inicial do site
 ```
 
-## 6. Fluxo de Uso
+## 📦 Como Executar Localmente
 
-1. Cadastro via formulário (senha é hasheada).
-2. Login ativa a sessão com ID do usuário.
-3. Áreas restritas só acessíveis com sessão ativa.
-4. Voluntariado grava no DB e envia e-mail de confirmação.
-5. Pedidos de ajuda disparam e-mails aos voluntários daquele serviço.
+1. Baixe este repositório:
 
-## 7. Como Rodar Localmente
+2. Instale o banco de dados MySQL e configure o arquivo `php/config.php` com seus dados locais.
 
-1. Clone o repositório:
-```bash
-git clone https://github.com/daniel-ferreira-2004/ConectaLocal.git
-```
-2. Copie para o diretório do XAMPP/WAMP.
-3. Configure o `config.php` com o acesso ao MySQL.
-4. Importe o banco de dados e insira os serviços.
-5. Ajuste credenciais SMTP no PHPMailer.
-6. Acesse via `http://localhost/ConectaLocal/HTML/form.html`.
+3. Crie as tabelas no banco conforme o modelo utilizado (pode ser extraído das queries no código).
+   
+4.Coloque a pasta do projeto junto ao HTDOCS do XAMPP. 
 
-## 8. Participantes
+5. Execute localmente com um servidor (XAMPP, WAMP, ou outro que suporte PHP + MySQL).
 
-- **Daniel Ferreira** – Desenvolvedor full-stack
+6. Suposto caminho (localhost/HTML/index.html)
 
-## 9. Futuras Melhorias
+## 🚀 Link do Projeto no GitHub Pages
 
-- Validação frontend aprimorada.
-- Upload de foto de perfil.
-- Dashboard de usuário.
-- Estilo moderno com Bootstrap/Tailwind.
-- API REST e autenticação JWT.
-
-## 10. Licença
-
-MIT License.
+A versão frontend está disponível em: [ConectaLocal no GitHub Pages](https://daniel-ferreira-2004.github.io/ConectaLocal/)
