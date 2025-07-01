@@ -390,6 +390,7 @@
             </div>
             <div class="swiper">
                 <div class="swiper-wrapper">
+
                     <!-- Slide 1 -->
                     <div class="swiper-slide">
                         <div class="carrosselCard">
@@ -401,6 +402,27 @@
                                 <p>Ajude com aulas ou encontre quem te ajude!</p>
                             </div>
                             <form action="../php/voluntariar.php" method="POST">
+                                <input type="hidden" name="id_servico" value="1"> <!-- ID do card -->
+                                <button type="submit" class="btn">Seja Voluntário</button>
+                            </form>
+                            <form action="../php/pedirAjuda.php" method="POST">
+                                <input type="hidden" name="id_servico" value="1">
+                                <button type="submit" class="btn">Peça Ajuda</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="carrosselCard">
+                            <div class="carrosselimg ist-inf">
+                                <img src="../img/Carrosel/instutor de informática.png" alt="indtrutor de informática">
+                            </div>
+                            <div class="carroselCardTexto">
+                                <h2>Instrutor(a) de informática</h2>
+                                <p>Aqui você poder encontrar intrutores para te ensinarem o basico de informática!</p>
+                            </div>
+                            <form action="../php/voluntariar.php" method="POST">
                                 <input type="hidden" name="id_servico" value="15"> <!-- ID do card -->
                                 <button type="submit" class="btn">Seja Voluntário</button>
                             </form>
@@ -410,16 +432,16 @@
                             </form>
                         </div>
                     </div>
-
-                    <!-- Slide 3 -->    
                     <div class="swiper-slide">
                         <div class="carrosselCard">
-                            <div class="carrosselimg ist-inf">
-                                <img src="../img/Carrosel/instutor de informática.png" alt="indtrutor de informática">
+                            <div class="carrosselimg">
+                                <img src="../img/Carrosel/imagem de atendimento psicologico.png"
+                                    alt="Ajuda psicologica">
                             </div>
                             <div class="carroselCardTexto">
-                                <h2>Instrutor(a) de informática</h2>
-                                <p>Aqui você poder encontrar intrutores para te ensinarem o basico de informática!</p>
+                                <h2>psicologo online</h2>
+                                <p>Precisa de ajuda psicológica Vejas os profissionais que estão pronto para te ajudar
+                                    com cosultas online!</p>
                             </div>
                             <form action="../php/voluntariar.php" method="POST">
                                 <input type="hidden" name="id_servico" value="16"> <!-- ID do card -->
@@ -434,11 +456,11 @@
                     <div class="swiper-slide">
                         <div class="carrosselCard">
                             <div class="carrosselimg">
-                                <img src="../img/Carrosel/imagem de atendimento psicologico.png" alt="Ajuda psicologica">
+                                <img src="../img/Carrosel/designe grafico.png" alt="designer grafico">
                             </div>
                             <div class="carroselCardTexto">
-                                <h2>psicologo online</h2>
-                                <p>Precisa de ajuda psicológica Vejas os profissionais que estão pronto para te ajudar com cosultas online!</p>
+                                <h2>Design gráfico</h2>
+                                <p>procure aqui um designer grafico para sua empresa!</p>
                             </div>
                             <form action="../php/voluntariar.php" method="POST">
                                 <input type="hidden" name="id_servico" value="17"> <!-- ID do card -->
@@ -453,11 +475,11 @@
                     <div class="swiper-slide">
                         <div class="carrosselCard">
                             <div class="carrosselimg">
-                                <img src="../img/Carrosel/designe grafico.png" alt="designer grafico">
+                                <img src="../img/Carrosel/analista de dados.png" alt="Serviço de analista">
                             </div>
                             <div class="carroselCardTexto">
-                                <h2>Design gráfico</h2>
-                                <p>procure aqui um designer grafico para sua empresa!</p>
+                                <h2>Analista de dados</h2>
+                                <p>Procure aqui um analista para sua empresa!</p>
                             </div>
                             <form action="../php/voluntariar.php" method="POST">
                                 <input type="hidden" name="id_servico" value="18"> <!-- ID do card -->
@@ -472,11 +494,11 @@
                     <div class="swiper-slide">
                         <div class="carrosselCard">
                             <div class="carrosselimg">
-                                <img src="../img/Carrosel/analista de dados.png" alt="Serviço de analista">
+                                <img src="../img/Carrosel/BEM-Estar.png" alt="Aula de yoga e etc">
                             </div>
                             <div class="carroselCardTexto">
-                                <h2>Analista de dados</h2>
-                                <p>Procure aqui um analista para sua empresa!</p>
+                                <h2>Oficina bem estar</h2>
+                                <p>participe de aula de yoga, meditação e outras!</p>
                             </div>
                             <form action="../php/voluntariar.php" method="POST">
                                 <input type="hidden" name="id_servico" value="19"> <!-- ID do card -->
@@ -491,11 +513,12 @@
                     <div class="swiper-slide">
                         <div class="carrosselCard">
                             <div class="carrosselimg">
-                                <img src="../img/Carrosel/BEM-Estar.png" alt="Aula de yoga e etc">
+                                <img src="../img/Carrosel/Mentoria profissional.png" alt="Mentores profissionalizantes">
                             </div>
                             <div class="carroselCardTexto">
-                                <h2>Oficina bem estar</h2>
-                                <p>participe de aula de yoga, meditação e outras!</p>
+                                <h2>Mentores Proficinalizantes</h2>
+                                <p>Aqui você achara mentores profissionais que ajudarão você engressar no mercado de
+                                    trabalho !</p>
                             </div>
                             <form action="../php/voluntariar.php" method="POST">
                                 <input type="hidden" name="id_servico" value="20"> <!-- ID do card -->
@@ -503,25 +526,6 @@
                             </form>
                             <form action="../php/pedirAjuda.php" method="POST">
                                 <input type="hidden" name="id_servico" value="20">
-                                <button type="submit" class="btn">Peça Ajuda</button>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="carrosselCard">
-                            <div class="carrosselimg">
-                                <img src="../img/Carrosel/Mentoria profissional.png" alt="Mentores profissionalizantes">
-                            </div>
-                            <div class="carroselCardTexto">
-                                <h2>Mentores Proficinalizantes</h2>
-                                <p>Aqui você achara mentores profissionais que ajudarão você engressar no mercado de trabalho !</p>
-                            </div>
-                            <form action="../php/voluntariar.php" method="POST">
-                                <input type="hidden" name="id_servico" value="21"> <!-- ID do card -->
-                                <button type="submit" class="btn">Seja Voluntário</button>
-                            </form>
-                            <form action="../php/pedirAjuda.php" method="POST">
-                                <input type="hidden" name="id_servico" value="21">
                                 <button type="submit" class="btn">Peça Ajuda</button>
                             </form>
                         </div>

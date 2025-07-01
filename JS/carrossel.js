@@ -23,13 +23,13 @@ const swiper = new Swiper('.swiper', {
         slidesPerView: 2, // celulares
       },
       768: {
-        slidesPerView: 4,
+        slidesPerView: 3,
       },
       1024: {
-        slidesPerView: 4,
+        slidesPerView: 3,
       },
       1200: {
-        slidesPerView: 5,
+        slidesPerView: 4,
       },
     },
 

@@ -12,7 +12,6 @@ function aplicarScrollReveal(selectores) {
 
 // Lista de seletores que você quer animar
 const elementosParaAnimar = [
-    ".ComoFunciona",
     ".façaParte",
     ".empresas",
     ".Banner",

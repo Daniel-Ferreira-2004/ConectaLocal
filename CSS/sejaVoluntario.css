@@ -28,7 +28,6 @@
     display: flex;
     justify-content: center;
     align-items: stretch;
-
 }
 
 .swiper-wrapper {
@@ -109,7 +108,7 @@
 
 @media (max-width: 768px) {
     html {
-        font-size: 50%;
+        font-size: 70%;
     }
     .swiper-button-prev,
     .swiper-button-next {
@@ -120,7 +119,8 @@
         font-size: 90%;
     }
     .carrosselCard {
-        width: 90%;
+        width: 95%;
+        font-size: 50%;
     }
 
     .img-voluntario {
@@ -129,5 +129,18 @@
 
     video {
         width: 300px;
+    }
+}
+
+@media (max-width: 1280px) {
+        .carrosselCard {
+        font-size: 80%;
+    }
+        .img-voluntario {
+        width: 600px;
+    }
+
+    video {
+        width: 600px;
     }
 }

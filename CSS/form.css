@@ -401,6 +401,9 @@ label {
 /*Tela Tablet e celular*/
 @media (max-width: 768px) {
 
+    html {
+        font-size: 80%;
+    }
     .overlayContainer {
         display: none;
     }

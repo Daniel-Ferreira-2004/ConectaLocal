@@ -24,9 +24,17 @@
     animation: fadeInDelay 0.8s ease forwards;
 }
 
-.delay-1 { animation-delay: 0.2s; }
-.delay-2 { animation-delay: 0.4s; }
-.delay-3 { animation-delay: 0.6s; }
+.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.delay-2 {
+    animation-delay: 0.4s;
+}
+
+.delay-3 {
+    animation-delay: 0.6s;
+}
 
 @keyframes fadeInDelay {
     to {
@@ -85,7 +93,7 @@ nav {
 
 }
 
-.navPincipal ul li:hover{
+.navPincipal ul li:hover {
     cursor: pointer;
 }
 
@@ -119,9 +127,14 @@ nav {
 
 }
 
-.ComoFunciona, .façaParte, .empresas, .Banner, .swiper-slide, .voluntario01 {
+.façaParte,
+.empresas,
+.Banner,
+.swiper-slide,
+.voluntario01 {
     visibility: hidden;
 }
+
 /*Fim do header*/
 
 /*Chamando Botão*/
@@ -210,6 +223,7 @@ p {
         transform: translateY(0);
     }
 }
+
 /*Fim Voluntarios*/
 
 /*Começo Como funciona*/
@@ -217,7 +231,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 1em 10%;
+    margin: 2em 10%;
     gap: 2em;
 }
 
@@ -248,7 +262,7 @@ p {
 }
 
 .ComoFuncionaBoxTexto p {
-    padding: 0,9em;
+    padding: 0, 9em;
     font-size: 17px;
 }
 
@@ -262,6 +276,7 @@ p {
     width: 70%;
     margin: 1em;
 }
+
 /*Fim Como funciona*/
 
 /*Começo Faça Parte*/
@@ -284,6 +299,7 @@ p {
     color: white;
     margin: 5em;
 }
+
 /*Fim Faça Parte*/
 
 /*Começo Empresas*/
@@ -303,6 +319,7 @@ p {
 .empresasContainer img:hover {
     transform: scale(1.1);
 }
+
 /*Fim Empresas*/
 
 span {
@@ -311,7 +328,7 @@ span {
 
 
 /*venha se voluntariar*/
-.voluntariar{
+.voluntariar {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -368,7 +385,8 @@ span {
 }
 
 .footer-section ul li a:hover {
-    color: var(--CorPrimaria); /* certifique-se que essa variável esteja definida */
+    color: var(--CorPrimaria);
+    /* certifique-se que essa variável esteja definida */
 }
 
 .social-icons {
@@ -405,6 +423,7 @@ span {
     font-size: 1.8rem;
     cursor: pointer;
 }
+
 /* Responsividade */
 
 .login-mobile span {
@@ -419,11 +438,6 @@ span {
         font-size: 70%;
     }
 
-    .containerVoluntarios {
-        flex-direction: column;
-        margin: 2em 10%;
-    }
-
     .voluntarioTexto {
         width: 100%;
         padding: 2em;
@@ -431,11 +445,6 @@ span {
         text-align: center;
         align-items: center;
         margin-right: 0;
-    }
-
-    .voluntarioIMG img {
-        width: 20em;
-        margin: 2em;
     }
 
     .ComoFuncionaContainer {
@@ -452,15 +461,16 @@ span {
 
     .empresasContainer {
         grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
-        margin: 4em 2.5em;
+        margin: 4em 15%;
     }
 
     .empresasContainer img {
-        width: 80%;
+        width: 75%;
     }
 
     .lista-header {
-        display: none; /* FORÇA o ocultamento no mobile */
+        display: none;
+        /* FORÇA o ocultamento no mobile */
         position: absolute;
         top: 100%;
         left: 0;
@@ -472,7 +482,8 @@ span {
     }
 
     .lista-header.active {
-        display: flex !important; /* Mostra quando ativado via JS */
+        display: flex !important;
+        /* Mostra quando ativado via JS */
     }
 
     .lista-header ul {
@@ -503,11 +514,43 @@ span {
 
 @media (max-width: 578px) {
     .ComoFuncionaBoxTexto {
-        padding-bottom: 18em;
+        padding-bottom: 10em;
     }
 
     .façaParteContainer {
         margin: 2em;
         padding: 3em 1em;
+    }
+    
+    .containerVoluntarios {
+        flex-direction: column;
+        margin: 5em 2em;
+        padding: 0 2em;
+    }
+
+    .btnVoluntarios {
+        display: flex;
+        flex-direction: column;
+        margin: 5em 0;
+        gap: 1em;
+    }
+}
+
+@media (max-width: 1180px) {
+
+    .containerVoluntarios {
+        flex-direction: column;
+        margin: 5em 2em;
+        padding: 0 2em;
+    }
+
+    .btnVoluntarios {
+        display: flex;
+        margin: 5em 0;
+        gap: 1em;
+    }
+
+    .ComoFuncionaBoxTexto {
+        height: 25em;
     }
 }
