@@ -84,10 +84,12 @@ ConectaLocal/
 4. QR CODE:
   ![frame](https://github.com/user-attachments/assets/c6d8313e-072f-49f6-804b-137d79e16bcc)
 
+5. Link:
+   https://daniel-ferreira-2004.github.io/ConectaLocal/HTML/index.html
    
-4.Coloque a pasta do projeto junto ao HTDOCS do XAMPP. 
+6.Coloque a pasta do projeto junto ao HTDOCS do XAMPP. 
 
-5. Execute localmente com um servidor (XAMPP, WAMP, ou outro que suporte PHP + MySQL).
+7. Execute localmente com um servidor (XAMPP, WAMP, ou outro que suporte PHP + MySQL).
 
-6. Suposto caminho (localhost/HTML/index.html)
+8. Suposto caminho (localhost/HTML/index.html)
 
